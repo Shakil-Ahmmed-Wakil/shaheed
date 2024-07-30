@@ -1,16 +1,20 @@
 ---
+import MartyrCard from "../components/MartyrCard.astro";
 
+const response = await fetch(
+	"https://script.google.com/macros/s/AKfycbzAU32-_tkfspwtpvVfVJg0J9nuJ_fOclIBubUGEMl8l0o18V3udivFFFUmYhOMKhfJ1g/exec",
+);
+const data = await response.json();
 ---
 
-<html lang="en">
+<html>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Martyrs List</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Martyrs</h1>
+		<div>
+			{data.map((martyr) => <MartyrCard {...martyr} />)}
+		</div>
 	</body>
 </html>
