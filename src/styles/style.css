@@ -1,16 +1,24 @@
-body {
-    padding: 5%;
-  }
-  .martyr-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 48px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-  .martyr-card {
-    background: #f7f7f7;
-    border: 1px dashed gray;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 32px;
-  }
+    }
+    body {
+      padding: 5%;
+    }
+    .martyr-grid {
+      display: grid;
+      gap: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .martyr-card {
+        background: #f7f7f7;
+        border: 1px dashed gray;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-wrap: break-word;
+      border-radius: 8px;
+    }
