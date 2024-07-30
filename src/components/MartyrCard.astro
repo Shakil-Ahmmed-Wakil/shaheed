@@ -1,23 +1,23 @@
 ---
 const {
-    Name,
-    Age,
-    Occupation,
-    Nature_of_Death,
-    Hospital,
-    Place_of_Occurrence,
-    Killing_Date,
-    Killing_Time,
+    name,
+    age,
+    occupation,
+    natureofDeath,
+    hospital,
+    placeOfOccurrence,
+    killingDate,
+    killingTime,
 } = Astro.props;
 ---
 
 <div class="martyr-card">
-    <h2>{Name || "Unidentified"}</h2>
-    <p>Age: {Age || "Unknown"}</p>
-    <p>Occupation: {Occupation || "Unknown"}</p>
-    <p>Nature of Death: {Nature_of_Death || "Unknown"}</p>
-    <p>Hospital: {Hospital || "Unknown"}</p>
-    <p>Place of Occurrence: {Place_of_Occurrence || "Unknown"}</p>
-    <p>Killing Date: {Killing_Date || "Unknown"}</p>
-    <p>Killing Time: {Killing_Time || "Unknown"}</p>
+    <h2>{name || "Unidentified"}</h2>
+    <p>Age: {age || "Unknown"}</p>
+    <p>Occupation: {occupation || "Unknown"}</p>
+    <p>Nature of Death: {natureofDeath || "Unknown"}</p>
+    <p>Hospital: {hospital || "Unknown"}</p>
+    <p>Place of Occurrence: {placeOfOccurrence || "Unknown"}</p>
+    <p>Killing Date: {new Date(killingDate).toLocaleDateString() || "Unknown"}</p>
+    <p>Killing Time: {killingTime || "Unknown"}</p>
 </div>
