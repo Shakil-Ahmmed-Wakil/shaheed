@@ -18,6 +18,11 @@ const {
     <p>Nature of Death: {natureofDeath || "Unknown"}</p>
     <p>Hospital: {hospital || "Unknown"}</p>
     <p>Place of Occurrence: {placeOfOccurrence || "Unknown"}</p>
-    <p>Killing Date: {new Date(killingDate).toLocaleDateString() || "Unknown"}</p>
+    <p>Killing Date: {new Date(killingDate).toLocaleDateString(undefined, {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        }) || "Unknown"
+    }</p>
     <p>Killing Time: {killingTime || "Unknown"}</p>
 </div>
